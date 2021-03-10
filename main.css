@@ -1,0 +1,419 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* fonts
+
+font-family: 'Allura', cursive;
+font-family: 'Herr Von Muellerhoff', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Sofia', cursive; */
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  /* per non far fare side scrolling ad alcuni modelli di cellulare  */
+}
+
+body {
+  background-color: #f4f5db;
+  font-family: 'Poppins', sans-serif;
+}
+
+#welcome-section {
+  height: 100vh;
+  padding: 0;
+}
+
+/* nav-bar */
+.navigazione {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 175, 145, 0.9);
+  padding: .3rem 0;
+}
+
+.logo {
+  color: #184d47;
+  text-decoration: underline;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sofia', cursive;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background-color: #f7f7e8;
+  height: 3px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  width: 100%;
+  background-color: rgba(0, 175, 145, 0.9);
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1, 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #184d47;
+}
+
+.nav-toggle:checked~nav {
+  display: block;
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* Hello, I'm Sara! H1 e H3*/
+.scritta {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: rgb(0, 175, 145);
+  font-family: 'Sofia', cursive;
+  text-align: center;
+  text-shadow: 2px 2px rgb(24, 77, 71, 0.6);
+  line-height: 2em;
+}
+
+.scritta2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.7em;
+}
+
+/* triangoli */
+.triangle1, .triangle2, .triangle3 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 250px solid transparent;
+  border-right: 250px solid transparent;
+  border-bottom: 200px solid #ffcc29;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 10px -13px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.triangle2 {
+  border-bottom-color: #f58634;
+  transform: translate(-50%, -100%);
+  z-index: 101;
+}
+
+.triangle3 {
+  border-bottom-color: #007965;
+  transform: translate(-50%, 0);
+  z-index: 99;
+}
+
+/* sezioni */
+h2, p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.picture {
+  width: 17em;
+  align-self: center;
+  margin: 2em auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.pc, .phone {
+  border: solid 2px #184d47;
+}
+
+section {
+  color: #184d47;
+  padding: 4rem 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.orange {
+  background-color: rgba(245, 134, 51,0.9);
+}
+
+.yellow {
+  background-color: rgba(255, 204, 41, 0.9);
+}
+
+.white {
+  background-color: white;
+}
+
+.content--orange {
+  color: white;
+}
+
+/* PROJECTS */
+
+
+/* Contact */
+
+#contact{
+  background-color: #fff;
+}
+
+h2.contact{
+  margin-top: 0;
+}
+
+table {
+  margin: 0 auto;
+  width: 50%;
+  line-height: 2;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: right;
+}
+
+.fab, .far {
+  color: #f58634;
+}
+
+.fab:hover, .far:hover {
+  color: #184d47;
+}
+
+/* footer */
+footer {
+  background-color: #007965;
+  padding-top: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 0.1fr 0.1fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+}
+
+.social {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social a i {
+  margin: 1.5em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.social a i:hover {
+  color: rgb(255, 255, 255);
+}
+
+.developed {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-left: 0.2rem;
+}
+
+.developed p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.7em;
+}
+
+.logo-small {
+  font-family: 'Sofia', cursive;
+  font-size: 1.2em;
+  color: rgba(255, 204, 41, 0.8);
+  text-decoration: none;
+}
+
+@media screen and (min-width:40em) {
+  .scritta{
+    font-size: 3rem;
+  }
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .navigazione {
+    display: grid;
+    grid-template-columns: 0.4fr auto minmax(600px, 1fr) 0.4fr;
+  }
+
+  .logo {
+    display: grid;
+    grid-column: 2/3;
+    top: 5%;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    background-color: #184d47;
+    height: 4px;
+    position: absolute;
+    top: -.5em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  .hello {
+    top: 35%;
+  }
+
+  .nome {
+    top: 55%;
+  }
+
+  .orange, .yellow, .white {
+    height: auto;
+  }
+
+  .split {
+    flex-direction: row;
+  }
+
+  .split>* {
+    flex-basis: 100%;
+  }
+
+  .split>*+* {
+    margin-left: 2em;
+  }
+
+  .white {
+    height: 100vh;
+  }
+
+  table {
+    width: 30%;
+  }
+}
